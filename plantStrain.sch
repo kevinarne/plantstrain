@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:LED D1
-U 1 1 608F621E
-P 6450 3300
-F 0 "D1" H 6443 3045 50  0000 C CNN
-F 1 "LED" H 6443 3136 50  0000 C CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 6450 3300 50  0001 C CNN
-F 3 "~" H 6450 3300 50  0001 C CNN
-	1    6450 3300
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R_US WB1
 U 1 1 608F7210
 P 6200 4350
@@ -44,17 +33,6 @@ F 1 "R_US" H 6268 4755 50  0001 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 6240 4790 50  0001 C CNN
 F 3 "~" H 6200 4800 50  0001 C CNN
 	1    6200 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US WB3
-U 1 1 608F7EC5
-P 7100 4800
-F 0 "WB3" H 7168 4846 50  0000 L CNN
-F 1 "R_US" H 7168 4755 50  0001 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7140 4790 50  0001 C CNN
-F 3 "~" H 7100 4800 50  0001 C CNN
-	1    7100 4800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -112,10 +90,6 @@ F 3 "~" H 3350 5700 50  0001 C CNN
 	1    3150 5700
 	0    -1   -1   0   
 $EndComp
-Text GLabel 5450 3400 2    50   Input ~ 0
-SCL
-Text GLabel 5450 3200 2    50   Input ~ 0
-SDA
 $Comp
 L power:GND #PWR0101
 U 1 1 608FC726
@@ -125,17 +99,6 @@ F 1 "GND" H 6655 4977 50  0000 C CNN
 F 2 "" H 6650 5150 50  0001 C CNN
 F 3 "" H 6650 5150 50  0001 C CNN
 	1    6650 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0102
-U 1 1 608FCDDD
-P 4850 4250
-F 0 "#PWR0102" H 4850 4000 50  0001 C CNN
-F 1 "GND" H 4855 4077 50  0000 C CNN
-F 2 "" H 4850 4250 50  0001 C CNN
-F 3 "" H 4850 4250 50  0001 C CNN
-	1    4850 4250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -150,34 +113,12 @@ Wire Wire Line
 $Comp
 L power:+5V #PWR0103
 U 1 1 608FD49D
-P 6650 4050
-F 0 "#PWR0103" H 6650 3900 50  0001 C CNN
-F 1 "+5V" H 6665 4223 50  0000 C CNN
-F 2 "" H 6650 4050 50  0001 C CNN
-F 3 "" H 6650 4050 50  0001 C CNN
-	1    6650 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R2
-U 1 1 608FE6FB
-P 5950 3300
-F 0 "R2" V 6155 3300 50  0000 C CNN
-F 1 "220" V 6064 3300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5990 3290 50  0001 C CNN
-F 3 "~" H 5950 3300 50  0001 C CNN
-	1    5950 3300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L MCU_Microchip_ATtiny:ATtiny85-20MU U1
-U 1 1 608F4615
-P 4850 3500
-F 0 "U1" H 4307 3546 50  0000 R CNN
-F 1 "ATtiny85-20MU" H 4307 3455 50  0000 R CNN
-F 2 "Package_DFN_QFN:QFN-20-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 4850 3500 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 4850 3500 50  0001 C CNN
-	1    4850 3500
+P 6650 3700
+F 0 "#PWR0103" H 6650 3550 50  0001 C CNN
+F 1 "+5V" H 6665 3873 50  0000 C CNN
+F 2 "" H 6650 3700 50  0001 C CNN
+F 3 "" H 6650 3700 50  0001 C CNN
+	1    6650 3700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -187,27 +128,13 @@ Wire Wire Line
 Wire Wire Line
 	6650 4200 7100 4200
 Connection ~ 6650 4200
-Wire Wire Line
-	5550 4550 5750 4550
 Connection ~ 6200 4550
 Wire Wire Line
 	6200 4550 6200 4650
 Connection ~ 5750 4550
 Wire Wire Line
 	5750 4550 6200 4550
-Wire Wire Line
-	7450 3500 7450 4550
-Wire Wire Line
-	7450 4550 7100 4550
-Wire Wire Line
-	5450 3500 7450 3500
 Connection ~ 7100 4550
-Wire Wire Line
-	7100 4550 7100 4650
-Wire Wire Line
-	5550 4550 5550 3600
-Wire Wire Line
-	5550 3600 5450 3600
 $Comp
 L power:+5V #PWR0104
 U 1 1 60907200
@@ -242,170 +169,6 @@ Text GLabel 3150 5550 2    50   Input ~ 0
 SDA
 Text GLabel 3150 5700 2    50   Input ~ 0
 SCL
-$Comp
-L power:+5V #PWR0106
-U 1 1 608FDE0B
-P 4850 2750
-F 0 "#PWR0106" H 4850 2600 50  0001 C CNN
-F 1 "+5V" H 4865 2923 50  0000 C CNN
-F 2 "" H 4850 2750 50  0001 C CNN
-F 3 "" H 4850 2750 50  0001 C CNN
-	1    4850 2750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4850 2750 4850 2900
-Wire Wire Line
-	4850 4100 4850 4250
-Wire Wire Line
-	5450 3300 5800 3300
-Wire Wire Line
-	6100 3300 6300 3300
-$Comp
-L power:GND #PWR0107
-U 1 1 60911926
-P 6850 3300
-F 0 "#PWR0107" H 6850 3050 50  0001 C CNN
-F 1 "GND" H 6855 3127 50  0000 C CNN
-F 2 "" H 6850 3300 50  0001 C CNN
-F 3 "" H 6850 3300 50  0001 C CNN
-	1    6850 3300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6600 3300 6850 3300
-$Comp
-L power:+5V #PWR0108
-U 1 1 6091DFC7
-P 6000 3700
-F 0 "#PWR0108" H 6000 3550 50  0001 C CNN
-F 1 "+5V" H 6015 3873 50  0000 C CNN
-F 2 "" H 6000 3700 50  0001 C CNN
-F 3 "" H 6000 3700 50  0001 C CNN
-	1    6000 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R1
-U 1 1 6091E403
-P 5600 3700
-F 0 "R1" V 5500 3700 50  0000 C CNN
-F 1 "10k" V 5700 3650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5640 3690 50  0001 C CNN
-F 3 "~" H 5600 3700 50  0001 C CNN
-	1    5600 3700
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5750 3700 6000 3700
-$Comp
-L Connector:TestPoint TP5
-U 1 1 6091F160
-P 3150 2150
-F 0 "TP5" V 3100 2200 50  0000 C CNN
-F 1 "PB2_PROG" V 3150 2500 50  0000 C CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 3350 2150 50  0001 C CNN
-F 3 "~" H 3350 2150 50  0001 C CNN
-	1    3150 2150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP4
-U 1 1 6091F451
-P 3150 2050
-F 0 "TP4" V 3100 2100 50  0000 C CNN
-F 1 "PB1_PROG" V 3150 2400 50  0000 C CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 3350 2050 50  0001 C CNN
-F 3 "~" H 3350 2050 50  0001 C CNN
-	1    3150 2050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP3
-U 1 1 6091F5F6
-P 3150 1950
-F 0 "TP3" V 3100 2000 50  0000 C CNN
-F 1 "PB0_PROG" V 3150 2300 50  0000 C CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 3350 1950 50  0001 C CNN
-F 3 "~" H 3350 1950 50  0001 C CNN
-	1    3150 1950
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP2
-U 1 1 6091F732
-P 3150 1850
-F 0 "TP2" V 3100 1900 50  0000 C CNN
-F 1 "RES_PROG" V 3150 2200 50  0000 C CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 3350 1850 50  0001 C CNN
-F 3 "~" H 3350 1850 50  0001 C CNN
-	1    3150 1850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP1
-U 1 1 6091F92C
-P 3150 1750
-F 0 "TP1" V 3100 1800 50  0000 C CNN
-F 1 "5V_PROG" V 3150 2100 50  0000 C CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 3350 1750 50  0001 C CNN
-F 3 "~" H 3350 1750 50  0001 C CNN
-	1    3150 1750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP6
-U 1 1 6091FB3F
-P 3150 2250
-F 0 "TP6" V 3100 2300 50  0000 C CNN
-F 1 "GND_PROG" V 3150 2600 50  0000 C CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 3350 2250 50  0001 C CNN
-F 3 "~" H 3350 2250 50  0001 C CNN
-	1    3150 2250
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0109
-U 1 1 60921A6C
-P 3300 2300
-F 0 "#PWR0109" H 3300 2050 50  0001 C CNN
-F 1 "GND" H 3305 2127 50  0000 C CNN
-F 2 "" H 3300 2300 50  0001 C CNN
-F 3 "" H 3300 2300 50  0001 C CNN
-	1    3300 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0110
-U 1 1 60921F72
-P 3300 1700
-F 0 "#PWR0110" H 3300 1550 50  0001 C CNN
-F 1 "+5V" H 3315 1873 50  0000 C CNN
-F 2 "" H 3300 1700 50  0001 C CNN
-F 3 "" H 3300 1700 50  0001 C CNN
-	1    3300 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3150 2250 3300 2250
-Wire Wire Line
-	3300 2250 3300 2300
-Wire Wire Line
-	3150 1750 3300 1750
-Wire Wire Line
-	3300 1750 3300 1700
-Text GLabel 3150 1950 2    50   Input ~ 0
-SDA
-Text GLabel 3150 2150 2    50   Input ~ 0
-SCL
-Text GLabel 3150 2050 2    50   Input ~ 0
-PB1
-Text GLabel 3150 1850 2    50   Input ~ 0
-RES
-Text GLabel 5450 3700 3    50   Input ~ 0
-RES
-Text GLabel 5750 3300 1    50   Input ~ 0
-PB1
 $Comp
 L pspice:CAP C1
 U 1 1 609340A0
@@ -458,4 +221,85 @@ Wire Wire Line
 	7100 4200 7100 4300
 Wire Wire Line
 	7100 4450 7100 4550
+$Comp
+L Arne_Strain:Strain_Gauge SG?
+U 1 1 60B13278
+P 7350 4800
+F 0 "SG?" H 7250 5000 50  0000 L CNN
+F 1 "Strain_Gauge" H 7100 4700 50  0000 L CNN
+F 2 "Arne_Strain:Strain_Gauge" H 7350 4800 50  0001 C CNN
+F 3 "" H 7350 4800 50  0001 C CNN
+	1    7350 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4550 7100 4700
+Wire Wire Line
+	7100 4850 7100 4950
+$Comp
+L Device:R_US R?
+U 1 1 60B15945
+P 6650 3900
+F 0 "R?" V 6855 3900 50  0000 C CNN
+F 1 "50" V 6764 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6690 3890 50  0001 C CNN
+F 3 "~" H 6650 3900 50  0001 C CNN
+	1    6650 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3750 6650 3700
+$Comp
+L Analog_ADC:ADS1015IDGS U?
+U 1 1 60B19536
+P 8950 4550
+F 0 "U?" H 8700 5050 50  0000 C CNN
+F 1 "ADS1015IDGS" H 9250 4200 50  0000 C CNN
+F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 8950 4050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ads1015.pdf" H 8900 3650 50  0001 C CNN
+	1    8950 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60B19FE9
+P 8950 3800
+F 0 "#PWR?" H 8950 3650 50  0001 C CNN
+F 1 "+5V" H 8965 3973 50  0000 C CNN
+F 2 "" H 8950 3800 50  0001 C CNN
+F 3 "" H 8950 3800 50  0001 C CNN
+	1    8950 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 3800 8950 4050
+$Comp
+L power:GND #PWR?
+U 1 1 60B1AE59
+P 8950 5100
+F 0 "#PWR?" H 8950 4850 50  0001 C CNN
+F 1 "GND" H 8955 4927 50  0000 C CNN
+F 2 "" H 8950 5100 50  0001 C CNN
+F 3 "" H 8950 5100 50  0001 C CNN
+	1    8950 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 4950 8950 5100
+Wire Wire Line
+	7100 4550 7750 4550
+Wire Wire Line
+	5450 4550 5750 4550
+Text GLabel 7750 4550 2    50   Input ~ 0
+SG
+Text GLabel 5450 4550 0    50   Input ~ 0
+WB_REF
+Text GLabel 8550 4450 0    50   Input ~ 0
+WB_REF
+Text GLabel 8550 4550 0    50   Input ~ 0
+SG
+Text GLabel 9350 4550 2    50   Input ~ 0
+SCL
+Text GLabel 9350 4650 2    50   Input ~ 0
+SDA
 $EndSCHEMATC
